@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://cfcqdmki64wcl"]
+
+[ext_resource type="Script" path="res://scripts/world.gd" id="1_6o62b"]
+[ext_resource type="PackedScene" uid="uid://cldy6hjre1c3t" path="res://scenes/player.tscn" id="2_mqx3g"]
+[ext_resource type="Environment" uid="uid://cnw800lyl8w0x" path="res://assets/environments/world_environment.tres" id="2_uyaxv"]
+[ext_resource type="PackedScene" uid="uid://c1tjcoen625oj" path="res://scenes/road.tscn" id="3_2avlq"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_e2b45"]
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_6o62b")
+
+[node name="Space" type="Node3D" parent="."]
+
+[node name="Player" parent="Space" instance=ExtResource("2_mqx3g")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 2)
+speed = null
+jump_velocity = null
+
+[node name="road" parent="Space" instance=ExtResource("3_2avlq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -1)
+
+[node name="road2" parent="Space" instance=ExtResource("3_2avlq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 3)
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_e2b45")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("2_uyaxv")

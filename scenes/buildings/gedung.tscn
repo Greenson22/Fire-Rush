@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://duuknjtlfd3nx"]
+
+[ext_resource type="PackedScene" uid="uid://d412ajclurhu" path="res://assets/models/gedung.glb" id="1_a4jsb"]
+[ext_resource type="Texture2D" uid="uid://ch44modmpedk0" path="res://assets/materials/WoodFloor/WoodFloor051_1K-PNG_Color.png" id="2_7ixsl"]
+[ext_resource type="Texture2D" uid="uid://b88s7r238ffyk" path="res://assets/materials/WoodFloor/WoodFloor051_1K-PNG_NormalDX.png" id="3_m55yo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wuvsr"]
+albedo_color = Color(0.996078, 0.901961, 0.658824, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hgaq0"]
+albedo_texture = ExtResource("2_7ixsl")
+normal_enabled = true
+normal_texture = ExtResource("3_m55yo")
+
+[node name="Gedung" instance=ExtResource("1_a4jsb")]
+
+[node name="Dinding" parent="." index="0" groups=["building"]]
+surface_material_override/0 = SubResource("StandardMaterial3D_wuvsr")
+
+[node name="Dinding" parent="Dinding" index="0"]
+input_ray_pickable = false
+
+[node name="Lantai" parent="." index="7" groups=["building"]]
+surface_material_override/0 = SubResource("StandardMaterial3D_hgaq0")

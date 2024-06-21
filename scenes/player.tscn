@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://cldy6hjre1c3t"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_xwij7"]
+[ext_resource type="PackedScene" uid="uid://ft56ahxj3xv" path="res://scenes/fire_hose.tscn" id="2_apqeb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nv0tw"]
+albedo_color = Color(1, 0.305882, 1, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ip0xd"]
+material = SubResource("StandardMaterial3D_nv0tw")
+height = 3.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1lybl"]
+height = 3.0
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_xwij7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+mesh = SubResource("CapsuleMesh_ip0xd")
+skeleton = NodePath("../..")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+shape = SubResource("CapsuleShape3D_1lybl")
+
+[node name="FireHose" parent="." instance=ExtResource("2_apqeb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.490543, 1.26461, 0)
+spring_arm_path = NodePath("../SpringArm3D")
+
+[node name="SpringArm3D" type="SpringArm3D" parent="."]
+transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 0, 0, 1, 1, 4.65119, 0)
+spring_length = 3.0
+
+[node name="Camera3D" type="Camera3D" parent="SpringArm3D"]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, 0)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+path_postprocessing = 1
+debug_enabled = true
+debug_use_custom = true
