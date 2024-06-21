@@ -17,5 +17,5 @@ func _process(_delta):
 		particles.emitting = active
 		_pre_active = active
 	
-	if not Engine.is_editor_hint():
+	if not Engine.is_editor_hint() and spring_arm:
 		particles.rotation_degrees.z = -spring_arm.rotation_degrees.x-10

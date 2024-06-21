@@ -24,13 +24,12 @@ script = ExtResource("1_6o62b")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1, 0)
 
 [node name="Player" parent="Space" instance=ExtResource("2_mqx3g")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -1.34133)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.34133)
 
 [node name="Gedung" parent="Space" instance=ExtResource("3_0om5r")]
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
 
 [node name="Area3D" type="Area3D" parent="Space/Gedung"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 script = ExtResource("4_fefe8")
 player_path = NodePath("../../Player")
 
@@ -39,32 +38,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0380516, 0)
 shape = SubResource("ConcavePolygonShape3D_80uxk")
 
 [node name="Fire" parent="Space/Gedung" instance=ExtResource("4_qwmy8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.987685, 0, -0.756601)
-visible = false
-
-[node name="Fire2" parent="Space/Gedung" instance=ExtResource("4_qwmy8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.987685, 0, -2.04473)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.867996, 0, -2.02868)
 
 [node name="Fire3" parent="Space/Gedung" instance=ExtResource("4_qwmy8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.987685, 0, -6.06671)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.13734, 0, -0.86233)
 
 [node name="Fire4" parent="Space/Gedung" instance=ExtResource("4_qwmy8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.01305, 0, -6.06671)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4346, 0, -5.95984)
 
 [node name="Fire5" parent="Space/Gedung" instance=ExtResource("4_qwmy8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.59027, 0, -6.06671)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.36752, 0, -6.17332)
 
 [node name="Fire6" parent="Space/Gedung" instance=ExtResource("4_qwmy8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.379625, 0, -6.06671)
-visible = false
-
-[node name="Fire7" parent="Space/Gedung" instance=ExtResource("4_qwmy8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.32663, 0, -0.0129783)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.904422, 0, -6.23502)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_e2b45")
