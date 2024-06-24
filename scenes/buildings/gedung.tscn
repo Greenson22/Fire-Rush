@@ -1,14 +1,79 @@
-[gd_scene load_steps=12 format=3 uid="uid://duuknjtlfd3nx"]
+[gd_scene load_steps=17 format=3 uid="uid://duuknjtlfd3nx"]
 
 [ext_resource type="PackedScene" uid="uid://d412ajclurhu" path="res://assets/models/gedung.glb" id="1_a4jsb"]
 [ext_resource type="Texture2D" uid="uid://ch44modmpedk0" path="res://assets/materials/WoodFloor/WoodFloor051_1K-PNG_Color.png" id="2_7ixsl"]
 [ext_resource type="Texture2D" uid="uid://b88s7r238ffyk" path="res://assets/materials/WoodFloor/WoodFloor051_1K-PNG_NormalDX.png" id="3_m55yo"]
+[ext_resource type="PackedScene" uid="uid://c46nb8fiswl73" path="res://scenes/fire_extinguisher.tscn" id="6_uu8kn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fxi2i"]
 albedo_color = Color(1, 0.854902, 0.686275, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i5f43"]
 albedo_color = Color(1, 0.709522, 0.325964, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_26d3f"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_la1jb"]
+_surfaces = [{
+"aabb": AABB(-4.48164, 0, -6, 1.15644, 3.2, 0.0500002),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray(3, 0, 0, 0, 1, 0, 3, 0, 2, 0, 0, 0, 7, 0, 4, 0, 6, 0, 7, 0, 5, 0, 4, 0, 0, 0, 5, 0, 1, 0, 0, 0, 4, 0, 5, 0, 2, 0, 4, 0, 0, 0, 2, 0, 6, 0, 4, 0, 1, 0, 7, 0, 3, 0, 1, 0, 5, 0, 7, 0, 3, 0, 6, 0, 2, 0, 3, 0, 7, 0, 6, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 255, 255, 255, 255, 255, 255, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_glb5r"]
+resource_name = "gedung_Cube_001"
+_surfaces = [{
+"aabb": AABB(-4.48164, 0, -6, 1.15644, 3.2, 0.0500002),
+"attribute_data": PackedByteArray(223, 1, 124, 34, 223, 1, 124, 34, 223, 1, 124, 34, 223, 1, 124, 34, 223, 1, 124, 34, 223, 1, 124, 34, 223, 1, 124, 34, 223, 1, 124, 34, 223, 1, 124, 34, 223, 1, 124, 34, 223, 1, 124, 34, 223, 1, 124, 34, 223, 1, 124, 34, 223, 1, 124, 34, 223, 1, 124, 34, 223, 1, 124, 34, 223, 1, 124, 34, 223, 1, 124, 34, 223, 1, 124, 34, 223, 1, 124, 34, 223, 1, 124, 34, 223, 1, 124, 34, 223, 1, 124, 34, 223, 1, 124, 34),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray(9, 0, 0, 0, 3, 0, 9, 0, 6, 0, 0, 0, 21, 0, 12, 0, 18, 0, 21, 0, 15, 0, 12, 0, 1, 0, 16, 0, 4, 0, 1, 0, 13, 0, 16, 0, 8, 0, 14, 0, 2, 0, 8, 0, 20, 0, 14, 0, 5, 0, 23, 0, 11, 0, 5, 0, 17, 0, 23, 0, 10, 0, 19, 0, 7, 0, 10, 0, 22, 0, 19, 0),
+"material": SubResource("StandardMaterial3D_26d3f"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 191, 0, 0, 255, 255, 0, 0, 255, 191, 255, 255, 255, 255, 0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 255, 191, 255, 255, 255, 255, 0, 0, 255, 191, 0, 0, 0, 0, 255, 255, 254, 127, 0, 0, 0, 0, 255, 255, 255, 191, 0, 0, 0, 0, 255, 255, 255, 191, 255, 255, 0, 0, 255, 255, 254, 127, 255, 255, 0, 0, 255, 255, 255, 191, 255, 255, 0, 0, 255, 255, 255, 191, 0, 0, 255, 255, 255, 255, 254, 127, 0, 0, 255, 255, 255, 255, 255, 191, 0, 0, 255, 255, 255, 255, 255, 191, 255, 255, 255, 255, 255, 255, 254, 127, 255, 255, 255, 255, 255, 255, 255, 191, 255, 255, 255, 255, 255, 255, 255, 191, 255, 255, 255, 127, 0, 0, 255, 127, 255, 127, 255, 255, 255, 255, 255, 127, 0, 0, 255, 127, 255, 127, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 127, 255, 255, 255, 255, 255, 127, 255, 255, 255, 127, 255, 127, 0, 0, 255, 127, 255, 255, 0, 0, 255, 127, 255, 127, 255, 255, 255, 127, 255, 255, 0, 0, 255, 127, 255, 127, 0, 0, 255, 127, 255, 255, 255, 255, 255, 127, 255, 127, 255, 255, 255, 127, 255, 255, 255, 255, 255, 127, 255, 127, 0, 0)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_la1jb")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1sr70"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_74la3"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -2.08543, 0.05, 3.2, 1.2),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray(1, 0, 2, 0, 3, 0, 1, 0, 0, 0, 2, 0, 5, 0, 6, 0, 4, 0, 5, 0, 7, 0, 6, 0, 1, 0, 4, 0, 0, 0, 1, 0, 5, 0, 4, 0, 0, 0, 6, 0, 2, 0, 0, 0, 4, 0, 6, 0, 3, 0, 5, 0, 1, 0, 3, 0, 7, 0, 5, 0, 2, 0, 7, 0, 3, 0, 2, 0, 6, 0, 7, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 255, 255, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_a3qgb"]
+resource_name = "gedung_Cube_002"
+_surfaces = [{
+"aabb": AABB(-1, 0, -2.08543, 0.05, 3.2, 1.2),
+"attribute_data": PackedByteArray(241, 1, 124, 34, 241, 1, 124, 34, 241, 1, 124, 34, 241, 1, 124, 34, 241, 1, 124, 34, 241, 1, 124, 34, 241, 1, 124, 34, 241, 1, 124, 34, 241, 1, 124, 34, 241, 1, 124, 34, 241, 1, 124, 34, 241, 1, 124, 34, 241, 1, 124, 34, 241, 1, 124, 34, 241, 1, 124, 34, 241, 1, 124, 34, 241, 1, 124, 34, 241, 1, 124, 34, 241, 1, 124, 34, 241, 1, 124, 34, 241, 1, 124, 34, 241, 1, 124, 34, 241, 1, 124, 34, 241, 1, 124, 34),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray(5, 0, 8, 0, 11, 0, 5, 0, 2, 0, 8, 0, 17, 0, 20, 0, 14, 0, 17, 0, 23, 0, 20, 0, 4, 0, 13, 0, 1, 0, 4, 0, 16, 0, 13, 0, 0, 0, 18, 0, 6, 0, 0, 0, 12, 0, 18, 0, 9, 0, 15, 0, 3, 0, 9, 0, 21, 0, 15, 0, 7, 0, 22, 0, 10, 0, 7, 0, 19, 0, 22, 0),
+"material": SubResource("StandardMaterial3D_1sr70"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 0, 0, 0, 0, 255, 255, 254, 127, 0, 0, 0, 0, 255, 255, 255, 191, 0, 0, 0, 0, 255, 255, 255, 191, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 191, 0, 0, 255, 255, 0, 0, 255, 191, 0, 0, 255, 255, 255, 255, 254, 127, 0, 0, 255, 255, 255, 255, 255, 191, 0, 0, 255, 255, 255, 255, 255, 191, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 255, 255, 254, 127, 255, 255, 0, 0, 255, 255, 255, 191, 255, 255, 0, 0, 255, 255, 255, 191, 255, 255, 255, 255, 0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 255, 191, 255, 255, 255, 255, 0, 0, 255, 191, 255, 255, 255, 255, 255, 255, 254, 127, 255, 255, 255, 255, 255, 255, 255, 191, 255, 255, 255, 255, 255, 255, 255, 191, 255, 255, 255, 127, 0, 0, 255, 127, 255, 127, 255, 255, 255, 127, 255, 255, 0, 0, 255, 127, 255, 127, 255, 255, 255, 255, 255, 127, 255, 255, 255, 127, 255, 127, 255, 255, 255, 127, 255, 255, 255, 255, 255, 127, 255, 127, 255, 255, 255, 255, 255, 127, 0, 0, 255, 127, 255, 127, 0, 0, 255, 127, 255, 255, 0, 0, 255, 127, 255, 127, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 127, 0, 0, 255, 127, 255, 255, 255, 255, 255, 127, 255, 127, 0, 0)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_74la3")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cw5ob"]
 albedo_color = Color(1, 0.709522, 0.325964, 1)
@@ -24,14 +89,6 @@ albedo_texture = ExtResource("2_7ixsl")
 normal_enabled = true
 normal_texture = ExtResource("3_m55yo")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wcvcj"]
-albedo_color = Color(1, 0, 0.454902, 1)
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_46ihx"]
-material = SubResource("StandardMaterial3D_wcvcj")
-radius = 0.2
-height = 1.5
-
 [node name="Gedung" instance=ExtResource("1_a4jsb")]
 
 [node name="Dinding" parent="." index="0" groups=["building"]]
@@ -43,7 +100,17 @@ input_ray_pickable = false
 [node name="Pintu2" parent="." index="1"]
 surface_material_override/0 = SubResource("StandardMaterial3D_i5f43")
 
+[node name="Pintu" type="MeshInstance3D" parent="Pintu2" index="0" groups=["building"]]
+mesh = SubResource("ArrayMesh_glb5r")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_i5f43")
+
 [node name="Pintu1" parent="." index="2"]
+surface_material_override/0 = SubResource("StandardMaterial3D_i5f43")
+
+[node name="Pintu" type="MeshInstance3D" parent="Pintu1" index="0" groups=["building"]]
+mesh = SubResource("ArrayMesh_a3qgb")
+skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_i5f43")
 
 [node name="Pintu3" parent="." index="3"]
@@ -61,6 +128,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_7ra45")
 [node name="Lantai" parent="." index="7" groups=["building"]]
 surface_material_override/0 = SubResource("StandardMaterial3D_hgaq0")
 
-[node name="FireExtinguisher" type="MeshInstance3D" parent="." index="8"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.95614, 2.16587, -4.90372)
-mesh = SubResource("CapsuleMesh_46ihx")
+[node name="Lantai" parent="Lantai" index="0"]
+input_ray_pickable = false
+
+[node name="FireExtinguisher" parent="." index="8" instance=ExtResource("6_uu8kn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.04851, 1.90891, -4.90704)

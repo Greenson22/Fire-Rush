@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://c46nb8fiswl73"]
+
+[ext_resource type="Script" path="res://scripts/fire_extinguisher.gd" id="1_25il3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wcvcj"]
+albedo_color = Color(1, 0, 0.454902, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_46ihx"]
+material = SubResource("StandardMaterial3D_wcvcj")
+radius = 0.2
+height = 1.5
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_as1h7"]
+radius = 0.25
+height = 1.5
+
+[node name="FireExtinguisher" type="StaticBody3D"]
+script = ExtResource("1_25il3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_46ihx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_as1h7")

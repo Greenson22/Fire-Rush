@@ -21,10 +21,10 @@ func movement(delta):
 
 func get_velocity_by_path(path):
 	# mengarah ke target
-	var direction = obj.global_transform.origin.direction_to(path)
+	var _direction = obj.global_transform.origin.direction_to(path)
 	# pergerakan
-	velocity.x = direction.x * speed
-	velocity.z = direction.z * speed
+	velocity.x = _direction.x * speed
+	velocity.z = _direction.z * speed
 	return velocity
 
 # ambil velocity

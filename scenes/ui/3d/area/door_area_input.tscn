@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://b042onqbnbkyk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sp12a"]
+size = Vector3(0.1, 6.4, 1.2)
+
+[node name="DoorAreaInput" type="Area3D"]
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_sp12a")
